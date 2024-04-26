@@ -698,6 +698,16 @@
       \vspace{5mm}}%
 }
 
+% Usage: \educationentry{<degree>}{<institution>}{<location>}
+\newcommand*{\educationentry}[3]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 8cm} L{3cm} R{4cm}}
+    \entrypositionstyle{#1} & \entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+  \end{tabular*}
+}
+
 % Define an environment for cvsubentry
 \newenvironment{cvsubentries}{%
   \begin{center}
